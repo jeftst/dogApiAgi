@@ -7,7 +7,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run"
+    "cy:run": "cypress run",
+    "cy:report": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
+    "cy:generate": "marge cypress/reports/report.json -f report -o cypress/reports",
+    "test": "npm run cy:run && npm run cy:report && npm run cy:generate"
   },
   "devDependencies": {
     "cypress": "^13.6.4",
