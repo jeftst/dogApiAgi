@@ -23,7 +23,7 @@ jobs:
 
       # 3. Instala dependências
       - name: Instalar dependências NPM
-        run: npm install
+        run: npm ci
 
       # 4. Run Cypress Tests (modo headless)
       - name: Executar testes Cypress
